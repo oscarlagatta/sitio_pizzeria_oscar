@@ -25,6 +25,11 @@
       nomodule
       src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"
     ></script>
+
+    <script
+      defer
+      src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
+    ></script>
     <script defer src="js/script.js"></script>
     <title>Pizza & Quarto</title>
   </head>
@@ -40,11 +45,13 @@
 
       <nav class="main-nav">
         <ul class="main-nav-list">
-          <li><a class="main-nav-link" href="#">Como haces tu pedido</a></li>
-          <li><a class="main-nav-link" href="#">Nuestas comidas</a></li>
-          <li><a class="main-nav-link" href="#">Reviews</a></li>
-          <li><a class="main-nav-link" href="#">Precios</a></li>
-          <li><a class="main-nav-link nav-cta" href="#">Hacé tu pedido</a></li>
+          <li><a class="main-nav-link" href="#how">Como haces tu pedido</a></li>
+          <li><a class="main-nav-link" href="#meals">Nuestras comidas</a></li>
+          <li><a class="main-nav-link" href="#testimonials">Reviews</a></li>
+          <li><a class="main-nav-link" href="#pricing">Precios</a></li>
+          <li>
+            <a class="main-nav-link nav-cta" href="#cta">Hacé tu pedido</a>
+          </li>
         </ul>
       </nav>
 
@@ -64,11 +71,9 @@
               Una manera inteligente de ordenar comida que se acomoda a tus
               gustos personales.
             </p>
-
-            <a href="#" class="btn btn--full margin-right-sm" id=""
-              >Empieza ya</a
-            >
-            <a href="#" class="btn btn--outline" id="">Mas Info &darr;</a>
+            <!-- move to the call to action section -->
+            <a href="#cta" class="btn btn--full margin-right-sm">Empieza ya</a>
+            <a href="#how" class="btn btn--outline">Mas Info &darr;</a>
             <div class="delivered-meals">
               <div class="delivered-imgs">
                 <img src="img/customers/customer-1.jpg" alt="Foto Cliente" />
@@ -112,7 +117,7 @@
           </div>
         </div>
       </section>
-      <section class="section-how">
+      <section class="section-how" id="how">
         <div class="container">
           <span class="subheading">Como Haces tu Pedido</span>
           <h2 class="heading-secondary">Tu pizza en 3 simples pasos</h2>
@@ -171,7 +176,7 @@
           </div>
         </div>
       </section>
-      <section class="section-meals">
+      <section class="section-meals" id="meals">
         <div class="container center-text">
           <span class="subheading">Comidas</span>
           <h2 class="heading-secondary">
@@ -285,7 +290,7 @@
       </section>
       <!-- full bleed section -->
       <!-- quitamos grid grid--2-cols y creamos nuestra propia grilla.-->
-      <section class="section-testimonials">
+      <section class="section-testimonials" id="testimonials">
         <div class="testimonials-container">
           <span class="subheading">Testimonios</span>
           <h2 class="heading-secondary">
@@ -425,7 +430,7 @@
         </div>
       </section>
 
-      <section class="section-pricing">
+      <section class="section-pricing" id="pricing">
         <!-- copiamos el contenedr de la seccion meals, removemos la clase 
         center-text porque aqui no necesitamos centrar las cabeceras -->
         <div class="container">
@@ -548,7 +553,7 @@
         </div>
       </section>
 
-      <section class="section-cta">
+      <section class="section-cta" id="cta">
         <!-- centrado -->
         <div class="container">
           <div class="cta">

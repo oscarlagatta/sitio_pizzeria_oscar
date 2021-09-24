@@ -12,6 +12,38 @@ const headerEl = document.querySelector('.header');
 btnNavEl.addEventListener('click', function () {
   headerEl.classList.toggle('nav-open');
 });
+
+//////////////////////////////////////////////////
+// Smooth scrolling application
+// select only those with the href property available
+const allLinks = document.querySelectorAll('a:Link');
+// add an event listener to all of this allLinks on click
+allLinks.forEach(function (link) {
+  link.addEventListener('click', function (event) {
+    event.preventDefault();
+    const href = link.getAttribute('href');
+    // scroll back to top
+    // Logos
+    if (href === '#') {
+      window.scrollTo({
+        top: 0,
+        behavior: 'smooth',
+      });
+    }
+
+    // scroll to other links
+    if (href !== '#' && href.startsWith('#')) {
+      const sectionEl = document.querySelector(href);
+      sectionEl.scrollIntoView({ behavior: 'smooth' });
+    }
+
+    // close mobile navigaton
+    if (link.classList.contains('main-nav-link')) {
+      headerEl.classList.toggle('nav-open');
+    }
+  });
+});
+
 //////////////////////////////////////////////////
 // fixing flexbox gap property missing in some safari versions
 
